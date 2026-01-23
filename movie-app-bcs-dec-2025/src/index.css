@@ -1,0 +1,20 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.num-1 {
+  height: 12rem;
+  border-radius: 50%;
+  width: 13rem;
+}
+.p-name {
+  font-style: italic;
+}
+span {
+  font-weight: bold;
+  font-style: italic;
+}
