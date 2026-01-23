@@ -1,4 +1,5 @@
 import "./index.css";
+import { User } from "./User";
 
 //Component = UI + Logic
 export default function App() {
@@ -21,14 +22,5 @@ export default function App() {
     </div>
   );
 
-  function User({ name, img }) {
-    return (
-      <div>
-        <img className="num-1" src={img} alt="" />
-        <p className="user-msg">
-          Hello,<span className="p-name"> {name}</span> 🎉🎉
-        </p>
-      </div>
-    );
-  }
+ 
 }
