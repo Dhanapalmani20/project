@@ -6,15 +6,15 @@
   gap: 2rem;
 }
 
-.num-1 {
+.movie-poster {
   height: 30rem;
   border-radius: 2rem;
   width: 18rem;
 }
-.p-name {
+/* .p-name {
   font-style: italic;
 }
 span {
   font-weight: bold;
   font-style: italic;
-}
+} */
