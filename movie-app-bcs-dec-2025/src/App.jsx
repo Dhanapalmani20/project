@@ -1,6 +1,8 @@
-import { useState } from "react";
 import "./index.css";
 import { User } from "./User";
+import { BrowserRouter, Routes, Route } from "react-router";
+import { NavLink, Link } from "react-router";
+import { Counter } from "./Counter";
 
 //Component = UI + Logic
 export default function App() {
@@ -107,6 +109,9 @@ export default function App() {
   ];
   return (
     <>
+      <Routes>
+        <Route path="/" element={<App />} />
+      </Routes>
       <div className="App">
         {users.map((user) => (
           <User
@@ -120,20 +125,5 @@ export default function App() {
 
       <Counter />
     </>
-  );
-}
-function Counter() {
-  const [like, setLike] = useState(0);
-  const [dislike, setDislike] = useState(0);
-  console.log(like);
-
-  return (
-    <div>
-      <button onClick={() => setLike(like + 1)}>👍 {like}</button>
-      <button onClick={() => setDislike(dislike + 1)}>👍 {dislike}</button>
-      <progress value={like} max={like + dislike}>
-        50%
-      </progress>
-    </div>
   );
 }
