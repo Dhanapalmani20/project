@@ -1,4 +1,4 @@
-.App {
+ .App {
   font-family: sans-serif;
   text-align: center;
   display: flex;
@@ -11,10 +11,10 @@
   border-radius: 2rem;
   width: 18rem;
 }
-/* .p-name {
+.p-name {
   font-style: italic;
 }
 span {
   font-weight: bold;
   font-style: italic;
-} */
+} 

@@ -1,42 +1,95 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.App {
+  font-family: sans-serif;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-content: center;
+  justify-content: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+/* .user-msg {
+  color: orange;
+} */
+.profile-pic {
+  border-radius: 90rem;
+  height: 15rem;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.p-name {
+  font-style: italic;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+span {
+  font-weight: bold;
+  font-style: italic;
 }
+ 
+/* .img{
+  height: 20rem;
+  aspect-ratio: 1/1;
+} */
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.action-buttons{
+  display: flex;
+  justify-content: space-between;
+  
+  
+  .toggle{
+    font-size: 1rem;
+    font-weight: bold;
+    /* background: white; */
+    /* color: black; */
+    /* text-decoration: none; */
+    /* border: none; */
   }
-  to {
-    transform: rotate(360deg);
+
+}
+
+.like-btn{
+  justify-content: space-between;
+  display: flex;
+    /* height: 2px; */
+   /* width: 2px;  */
+   
+  margin-top: 1rem;
+  gap: 2px;
+
+  .like{
+    background: white;
+    color: blueviolet;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+ .dislike{
+    background: white;
+    color: blueviolet;
   }
+
 }
 
-.card {
-  padding: 2em;
+.input{
+  color: black;
+  background: whitesmoke;
+  height: 3rem;
+  width: 15rem;
 }
-
-.read-the-docs {
-  color: #888;
+.url{
+  display: block;
+  height: 3rem;
+  width: 100%;
+}
+.tittle{
+  display: block;
+  height: 3rem;
+  width: 100%;
+}
+.rating{
+  display: block;
+  height: 3rem;
+  width: 100%;
+}
+.summary{
+  display: block;
+  height: 3rem;
+  width: 100%;
+}
+.label{
+  gap: 3rem;
 }
