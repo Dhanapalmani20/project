@@ -1,11 +1,8 @@
-import React from "react";
-import "./MovieDetails.css";
-import InputTags from "./InputTags";
 import { useState } from "react";
-import InputMovies from "./InputMovies";
-import { BrowserRouter, Routes, Route } from "react-router";
+import InputTags from "./InputTags";
+import "./MovieDetails.css";
 
-function MovieDetails() {
+export function MovieDetails() {
   //  const [show, setShow] = useState(true);
   const Movies = [
     {
@@ -90,25 +87,24 @@ function MovieDetails() {
   ];
 
   return (
-    <section className="movie-box">
+    <div className="movie-box">
       {/* <InputMovies/>   */}
       {Movies.map(({ poster, name, rating, summary }) => (
         <MoviesExpress
-          key={name}
-          poster={poster}
           name={name}
+          poster={poster}
           rating={rating}
           summary={summary}
         />
       ))}
-    </section>
+    </div>
   );
 
   function MoviesExpress({ poster, name, rating, summary }) {
     const [show, setShow] = useState(true);
     return (
       <div className="movie-card">
-        <img src={poster} alt={name} className="movie-img" />
+        <img src={poster} alt="" className="movie-img" />
         <div className="title-text">
           <h3>
             {name} <span className="rating">⭐ {rating}</span>
@@ -117,18 +113,17 @@ function MovieDetails() {
         <div className="action-buttons">
           {/* Reacting User  - update show*/}
           <button onClick={() => setShow(!show)} className="toggle">
-            Toggle
+            Toggle Summary
           </button>
           <button>Delete</button>
         </div>
         <div className="para">
           {show ? <p className="summary">{summary}</p> : null}
         </div>
-        <div className="like-dislike"></div>
-        <InputTags />
-        <InputMovies />
+        <div className="like-dislike">
+          <InputTags />
+        </div>
       </div>
     );
   }
 }
-export default MovieDetails;

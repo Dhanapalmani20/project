@@ -1,20 +1,18 @@
 // import ColorGame from "./ColorGame";
-// import { BrowserRouter, Routes, Route } from "react-router";
-// import { NavLink } from 'react-router';
+import { BrowserRouter, Routes, Route, Link } from "react-router";
+import { NavLink } from "react-router";
+import { MovieDetails } from "./MovieDetails";
 
-// function App(){
-//   return(
-// <>
-// <Nav>
-//   <ul>
-//     <li><Link to="/ColorGame" >color</Link></li>
-//   </ul>
-// </Nav>
-// <Routes>
-//   <Route path="ColorGame" element={<ColorGame/>}/>
-// </Routes>
 
-// </>
-//   );
-// }
-// export default App;
+export default function App(){
+  return(
+<>
+<nav>
+        <Link to="/movie">MoviesList</Link>
+      </nav>
+<Routes>
+  <Route path="Movie" element={<MovieDetails/>}/>
+</Routes> 
+</>
+  );
+}

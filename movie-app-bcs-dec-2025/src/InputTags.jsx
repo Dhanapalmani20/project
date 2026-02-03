@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 
-function InputTags() {
+ export function InputTags() {
   const [like, setLike] = useState(0);
   const [Dislike, setDisLike] = useState(0);
 
