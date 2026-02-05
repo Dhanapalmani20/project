@@ -3,7 +3,10 @@ import InputTags from "./InputTags";
 import "./MovieDetails.css";
 
 export function MovieDetails() {
-  //  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(true);
+  const deleteMovie = (id) => {
+    setShow((prev) => prev.filter((movie) => movie.id !== id));
+  };
   const Movies = [
     {
       name: "Border 2",
@@ -89,18 +92,19 @@ export function MovieDetails() {
   return (
     <div className="movie-box">
       {/* <InputMovies/>   */}
-      {Movies.map(({ poster, name, rating, summary }) => (
+      {Movies.map(({ poster, name, rating, summary, id }) => (
         <MoviesExpress
           name={name}
           poster={poster}
           rating={rating}
           summary={summary}
+          onDelete={id}
         />
       ))}
     </div>
   );
 
-  function MoviesExpress({ poster, name, rating, summary }) {
+  function MoviesExpress({ poster, name, rating, summary, onDelete, id }) {
     const [show, setShow] = useState(true);
     return (
       <div className="movie-card">
@@ -115,7 +119,7 @@ export function MovieDetails() {
           <button onClick={() => setShow(!show)} className="toggle">
             Toggle Summary
           </button>
-          <button>Delete</button>
+          <button onClick={() => onDelete(deleteMovie)}>Delete</button>
         </div>
         <div className="para">
           {show ? <p className="summary">{summary}</p> : null}
